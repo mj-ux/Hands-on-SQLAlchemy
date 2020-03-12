@@ -23,7 +23,6 @@ for i in range(0, 10):
     )
     rooms[i].messages.append(newMessage)
     session.add(newMessage)
-
 rooms[1].messages[-1].body="shiiiiiiiiiit"
 session.commit()
 print(rooms[1].last_message)

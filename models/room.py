@@ -19,7 +19,6 @@ class Room(Base):
         "Message",
         backref = "rooms",
     )
-    #last_message = column_property(select([Message.id, Message.body]))
     last_message = column_property(
         select(
             [Message.body]
@@ -32,5 +31,3 @@ class Room(Base):
         ).
         limit(1)
     )
-
-#SELECT * FROM monsters WHERE uid IN (SELECT uid FROM added_monsters)
